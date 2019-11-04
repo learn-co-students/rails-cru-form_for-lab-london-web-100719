@@ -1,0 +1,5 @@
+<h3>Songs Index</h3>
+
+<% @songs.each do |song| %>
+  <p><%= "Name: #{song.name} | Artist: #{song.artist.name} | Genre: #{song.genre.name}" %></p>
+<% end %>
