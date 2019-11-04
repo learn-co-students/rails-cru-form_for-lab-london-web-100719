@@ -11,7 +11,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(artist_params)
-    redirect_to artist_path(@artist)
+    redirect_to @artist
   end
 
   def edit
@@ -19,7 +19,7 @@ class ArtistsController < ApplicationController
 
   def update
     @artist.update(artist_params)
-    redirect_to artist_path(@artist)
+    redirect_to @artist
   end
 
   private

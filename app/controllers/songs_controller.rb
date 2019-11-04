@@ -14,7 +14,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.create(song_params)
-    redirect_to song_path(@song)
+    redirect_to @song
   end
 
   def edit
@@ -22,7 +22,7 @@ class SongsController < ApplicationController
 
   def update
     @song.update(song_params)
-    redirect_to song_path(@song)
+    redirect_to @song
   end
 
   private
