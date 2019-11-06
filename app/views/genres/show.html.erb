@@ -1,0 +1,12 @@
+<h1>My Genre: <%= @genre.name %></h1>
+
+<p>All songs in this genre:</p>
+<ul>
+    <% @genre.songs.each do |song|%>
+        <li><%= link_to song.name, song %></li>
+    <% end %>
+</ul>
+<!--
+<a href="/genres">Back to Genres</a>
+-->
+<%= link_to "Back to Genres", genres_path %>
